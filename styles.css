@@ -89,7 +89,7 @@ body {
 
 .hero {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   /* padding: 30px 150px; */
   width: 972px;
   gap: 30px;
