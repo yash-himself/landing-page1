@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap");
+
+/* we can also use 'rem' and 'em' units instead of 'px' , but here i used 'Px'  */
+
+/* :root */
+:root {
+  --theme: rgb(47, 24, 147);
+  --twitter: rgb(22, 166, 255);
+  --white: rgb(255, 255, 255);
+  --themeLight: rgb(160, 139, 255);
+  --button: rgb(237, 58, 135);
+}
+
+/* select effects */
+::selection {
+  background-color: var(--button);
+  color: var(--white);
+}
+
+/* style for all  */
+* {
+  padding: 0%;
+  margin: 0px;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "DM Sans", sans-serif;
+}
+
+/* style for body  */
+body {
+  background-color: var(--theme);
+}
+
+/* ===== Navbar section ======= */
+.navbar {
+  width: 972px;
+  height: 40px;
+  margin: 65px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: var(--white);
+}
+
+.linkList {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.linkList a {
+  color: var(--white);
+  font-size: 18px;
+}
+
+.activeLink {
+  color: var(--themeLight) !important;
+}
+
+.linkList a:hover {
+  color: var(--themeLight);
+}
+.purchaseBtn {
+  font-size: 18px;
+  height: 40px !important;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 5px 30px;
+  border: none;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 30px;
+  max-width: fit-content;
+  background-color: var(--button);
+  color: var(--white);
+}
+
+.btn:hover {
+  background-color: rgb(255, 0, 153);
+}
+
+/* ========= hero section ====== */
+
+.hero {
+  display: flex;
+  justify-content: center;
+  /* padding: 30px 150px; */
+  width: 972px;
+  gap: 30px;
+  margin: auto;
+}
+
+/* left side  */
+
+.leftSide {
+  padding-top: 20px;
+  width: 427px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: 496px;
+}
+
+.leftSide h1 {
+  font-size: 58px;
+  line-height: 70px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.leftSide p {
+  width: 70%;
+  font-size: 22px;
+  line-height: 30px;
+  color: var(--white);
+}
+
+/* right side section  */
+
+.rightSide {
+  width: 50%;
+}
+form h2 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+form {
+  display: flex;
+  width: 470px;
+  flex-direction: column;
+  padding: 20px 70px;
+  background-color: #fff;
+  gap: 28px;
+  padding-bottom: 40px;
+  border-radius: 10px;
+  height: 600px;
+}
+.inputBtns {
+  height: 50px;
+  width: 330px;
+  padding: 0px 15px;
+  border-radius: 30px;
+  border: 1px solid rgba(200, 200, 200, 0.603);
+}
+
+input[type="checkbox"] {
+  margin: 0px 10px;
+  cursor: pointer;
+}
+
+.or {
+  display: flex;
+  height: 20px;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+.or span {
+  width: 70px;
+  height: 1px;
+  background-color: rgba(174, 174, 174, 0.626);
+}
+
+.submitBtn {
+  background-color: var(--theme);
+  color: var(--white);
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.twitterBtn {
+  background-color: var(--twitter);
+  color: var(--white);
+  cursor: pointer;
+  font-weight: 400;
+}
+p > span {
+  padding: 0px 15px;
+  cursor: pointer;
+}
+
+form p {
+  text-align: center;
+}
+
+/* Handling responsiveness  */
+
+/* for tablets like screens */
+@media screen and (max-width: 1030px) {
+  /* Navbar  */
+  .navbar {
+    height: 80px;
+    padding: 0px 50px;
+  }
+
+  /* ========= hero section ====== */
+
+  .hero {
+    padding: 30px 50px;
+  }
+  /* left side  */
+  .leftSide {
+    width: 45%;
+    gap: 30px;
+  }
+  .leftSide p {
+    line-height: 22px;
+    color: var(--white);
+  }
+
+  /* form  */
+  form {
+    width: 100%;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  p > span {
+    padding: 0px 5px;
+  }
+}
